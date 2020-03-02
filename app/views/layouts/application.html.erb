@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159516284-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159516284-1');
+  </script>
+
+    <meta charset="utf-8">
+    <title>Waykup - groupe de jeunes EEBulle</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="description" content="Waykup youth group">
+    <meta name="author" content="EEBulle">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Favicon stuff -->
+    <%= favicon_link_tag asset_path("favicons/apple-touch-icon-57x57.png") %>
+    <%= favicon_link_tag asset_path("favicons/apple-touch-icon-60x60.png") %>
+    <%= favicon_link_tag asset_path("favicons/apple-touch-icon-72x72.png") %>
+    <%= favicon_link_tag asset_path("favicons/apple-touch-icon-76x76.png") %>
+    <%= favicon_link_tag asset_path("favicons/apple-touch-icon-114x114.png") %>
+    <%= favicon_link_tag asset_path("favicons/apple-touch-icon-120x120.png") %>
+    <%= favicon_link_tag asset_path("favicons/apple-touch-icon-144x144.png") %>
+    <%= favicon_link_tag asset_path("favicons/apple-touch-icon-152x152.png") %>
+    <%= favicon_link_tag asset_path("favicons/apple-touch-icon-180x180.png") %>
+    <%= favicon_link_tag asset_path("favicons/favicon-32x32.png") %>
+    <%= favicon_link_tag asset_path("favicons/android-chrome-192x192.png") %>
+    <%= favicon_link_tag asset_path("favicons/favicon-96x96.png") %>
+    <%= favicon_link_tag asset_path("favicons/favicon-16x16.png") %>
+    <%= favicon_link_tag asset_path("favicons/safari-pinned-tab.svg") %>
+    <%= favicon_link_tag asset_path("favicons/favicon.ico") %>
+    <link rel="manifest" href="<%= asset_path("favicons/manifest.json") %>">
+    <link rel="mask-icon" href="<%= asset_path("favicons/safari-pinned-tab.svg") %>">
+    <link rel="shortcut icon" href="<%= asset_path("favicons/favicon.ico") %>">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="<%= asset_path("favicons/mstile-144x144.png") %>">
+    <meta name="msapplication-config" content="<%= asset_path("favicons/browserconfig.xml") %>">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Mobile compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <body>
+    <nav id="navbar">
+      <div class="nav">
+        <a href="/">Home</a>
+        <a href="/#mission">Mission</a>
+        <a href="/#programme">Programme</a>
+        <a href="/shop">Shop</a>
+        <a href="/event">Event</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </nav>
+
+    <%= yield %>
+
+    <!-- Sticky nav JS script -->
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
