@@ -146,16 +146,8 @@ GEM
     regexp_parser (1.7.0)
     ruby_dep (1.5.0)
     rubyzip (2.2.0)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
-    sassc (2.2.1)
+    sassc (2.1.0)
       ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -173,7 +165,6 @@ GEM
     sqlite3 (1.4.2)
     thor (1.0.1)
     thread_safe (0.3.6)
-    tilt (2.0.10)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -211,7 +202,7 @@ DEPENDENCIES
   mail_form
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
-  sass-rails (>= 6)
+  sassc (~> 2.1.0)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -223,7 +214,7 @@ DEPENDENCIES
   webpacker (~> 4.0)
 
 RUBY VERSION
-   ruby 2.7.0p0
+   ruby 2.7.1p83
 
 BUNDLED WITH
    2.1.4
